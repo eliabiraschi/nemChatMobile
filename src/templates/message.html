@@ -1,0 +1,7 @@
+<div class="message" data-is-incoming="{{isIncoming}}">
+  <span class="time-stamp">{{timeStamp}}</span>
+  <span class="body">{{message}}</span>
+  {{# if hasPayment}}
+    <span class="amount">{{amount}} XEM</span>
+  {{/if}}
+</div>

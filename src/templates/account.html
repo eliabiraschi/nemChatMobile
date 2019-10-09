@@ -1,0 +1,13 @@
+<h4>Address:</h4>
+<span class="address">{{address}}</span>
+<div id="qr-code-mask">
+  <canvas id="qr-code-canvas"></canvas>
+</div>
+<h4>Balance:</h4>
+<span class="balance">{{balance}} XEM</span>
+{{#if needsTopUp}}
+<ons-button id="topup"class="topup-button" modifier="large">TOP UP</ons-button>
+{{/if}}
+{{#if needsActivation}}
+  <ons-button id="activate" modifier="large">Activate</ons-button>
+{{/if}}

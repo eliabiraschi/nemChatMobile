@@ -1,0 +1,86 @@
+#accountPage {
+  #accountPageHome {
+    #account {
+      span {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+      #topup, #activate {
+        margin-top: 3%;
+      }
+    }
+    #qr-code-mask {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      background-color: #efeff4;
+      #qr-code-canvas {
+        margin-top: 3%;
+      }
+      &.sharing {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: white;
+        padding-top: 15%;
+        #qr-code-canvas {
+          margin-top: 3%;
+          height: 60% !important;
+          width: auto !important;
+        }
+      }
+    }
+    #speed-dial {
+      visibility: visible;
+      &.sharing {
+        visibility: hidden;
+      }
+    }
+  }
+  #accountPageTransactions {
+    #transactions {
+      padding-top: 2%;
+      .transaction {
+        padding: 3%;
+        margin: 2%;
+        background-color: white;
+        border-radius: 10px;
+        span {
+          display: block;
+          width: 100%;
+        }
+        .time-stamp {
+          text-align: center;
+          padding: 2% 0;
+        }
+        .fee {
+          color: red;
+        }
+        .address {
+          white-space: nowrap;
+          overflow-x: scroll;
+          font-family: monospace;
+        }
+        .message {
+          padding: 1%;
+          font-style: italic;
+        }
+        &[data-is-incoming="true"] {
+          .amount {
+            color: green;
+          }
+        }
+        &[data-is-incoming="false"] {
+          .amount {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

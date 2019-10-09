@@ -1,0 +1,18 @@
+
+{{#if isIncoming}}
+  <div class="transaction open-chat" data-is-incoming="{{isIncoming}}" data-signer="{{signer}}">
+{{else}}
+  <div class="transaction open-chat" data-is-incoming="{{isIncoming}}" data-address="{{recipient}}">
+{{/if}}
+    <span class="time-stamp">{{timeStamp}}</span>
+    <span class="amount">Amount: {{amount}} XEM</span>
+    <span class="fee">Fee: {{fee}} XEM</span>
+    {{#if isIncoming}}
+    {{else}}
+      <span>Recipient:</span>
+      <p class="address">{{recipient}}</p>
+    {{/if}}
+    {{#if message}}
+      <p class="message">{{message}}</p>
+    {{/if}}
+  </div>

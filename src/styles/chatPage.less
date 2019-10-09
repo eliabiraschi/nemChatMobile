@@ -1,0 +1,93 @@
+#chatPage {
+  max-width: 100%;
+  max-height: 100%;
+  #messages {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 73vh;
+    .message {
+      width: 70%;
+      margin: 1% 0;
+      span {
+        display: block;
+      }
+      .time-stamp {
+        width: 100%;
+        text-align: center;
+      }
+      .body {
+        width: 100%;
+      }
+      .amount {
+        width: 100%;
+        text-align: right;
+      }
+      &[data-is-incoming="true"] {
+        float: left;
+        background-color: beige;
+        .amount {
+          color: green;
+        }
+      }
+      &[data-is-incoming="false"] {
+        background-color: aquamarine;
+        float: right;
+        .amount {
+          color: red;
+        }
+      }   
+    }
+  }
+  @media screen and (max-height: 500px) {
+    #messages {
+      max-height: 47vh;
+    }
+  }
+  #lower-left-part {
+    height: 20%;
+    width: 78%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    #message-editor {
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      textarea {
+        height: 100%;
+        width: 100%;
+        font-size: 1.2em;
+      }
+    }
+    #bottom {
+      width: 97%;
+      height: 50%;
+      overflow: hidden;
+      padding-left: 3%;
+      label {
+        width: 30%;
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #amount, #fee {
+        width: 40%;
+        text-align: right !important;
+      }
+      span {
+        display: inline-block;
+        margin-left: 5%;
+      }
+    }
+  }
+  #lower-right-part {
+    width: 20%;
+    height: 20%;
+    float: right;
+    #send {
+      height: 100%;
+      width: 100%;
+      line-height: 5;
+    }
+  }
+}

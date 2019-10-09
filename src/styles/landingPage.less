@@ -1,0 +1,34 @@
+#landingPage {
+  .page__content {
+    overflow: hidden;
+  }
+  #labels-mask {
+    background-color: #efeff4;
+    display: block;
+    p {
+      text-align: center;
+      &.note {
+        font-style: italic;
+      }
+    }
+  }
+  @media screen and (max-height: 500px) {
+    #labels-mask {
+      display: none;
+    }
+  }
+  #passphrase {
+    width: 94%;
+    font-size: 1.7em;
+    margin: 3% 3% 0 3%;
+  }
+  #buttons-mask {
+    padding: 3%;
+    background-color: #efeff4;
+    width: 94%;
+    .button {
+      margin-top: 3%;
+    }
+  }
+}
+
