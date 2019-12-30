@@ -34,7 +34,7 @@
     "cordova-plugin-inappbrowser": "^2.0.1",
     "cordova-plugin-qrscanner": "^2.5.0",
     "cordova-plugin-whitelist": "^1.3.3",
-    "handlebars": "^4.0.11",
+    "handlebars": "^4.3.0",
     "onsenui": "^2.8.3",
     "qrcode": "^1.0.0",
     "ramda": "^0.25.0"
